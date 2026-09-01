@@ -1,0 +1,27 @@
+name : Student Grade Checker CI
+
+on:
+    push:
+        branches : 
+            - main
+    
+    
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name : Checkout repository
+              uses: actions/checkout@v6
+
+            - name : List project files
+              run : ls
+
+            - name : show the current directoty
+              run : pwd
+            
+            - name : Install dependencies
+              run : npm install
+
+            - name : Run Tests
+              run: npm test
