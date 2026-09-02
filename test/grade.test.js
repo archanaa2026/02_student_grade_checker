@@ -3,8 +3,9 @@ const assert = require("node:assert");
 
 const { getGrade } = require("../script");
 
-test("Grade A", () => { 95), "B");
-assert.strictEqual(getGrade(90), "A");
+test("Grade A", () => {
+    assert.strictEqual(getGrade(95), "B");
+    assert.strictEqual(getGrade(90), "A");
 })
 
 test("Grade B", () => {
